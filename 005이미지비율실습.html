@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지비율 실습</title>
+    <style>
+        h2{
+            position: absolute;
+                left: -9999px;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden; 
+        }
+      .box1{
+       display: inline-block;
+      }
+      .box1 img{
+        aspect-ratio: 1 /1;
+        width: 200px;
+        object-fit: cover;
+      }
+
+      .box2{
+        display: inline-block;
+      }
+      .box2 img{
+        aspect-ratio: 2 / 1;
+        width: 200px;
+        object-fit: cover;
+      }
+      .padding .box3{
+        display: inline-block;
+        position: relative;
+        height: 0;
+        width: 200px;
+        padding-top: 200px;
+      }
+
+      .padding .box3 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .padding .box4{
+        display: inline-block;
+        position: relative;
+        height: 0;
+        width: 200px;
+        padding-top: 100px;
+
+      }
+      .padding .box4 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+</head>
+<body>
+    <div class="aspec"></div>
+    <h2>aspect-ratio방식</h2>
+        <div class="box1"><img src="./imges/weniv-binky.png" alt="위니브토끼캐릭터"></div>
+        <div class="box1"><img src="./imges/weniv-chilli.png" alt="위니브햄스터캐릭터"></div>
+        <div class="box1"><img src="./imges/weniv-garry.png" alt="위니브개구리캐릭터"></div>
+    <h2>padding 백분율 방식</h2>
+        <div class="box2"><img src="./imges/weniv-licat.png" alt="위니브사자캐릭터"></div>
+        <div class="box2"><img src="./imges/weniv-suri.png" alt="위니브수달캐릭터"></div>
+        <div class="box2"><img src="./imges/weniv-wade.png" alt="위니브두더지캐릭터"></div>
+    <div class="padding">
+        <h2>aspect-ratio방식</h2>
+            <div class="box3"><img src="./imges/weniv-binky.png" alt="위니브토끼캐릭터"></div>
+            <div class="box3"><img src="./imges/weniv-chilli.png" alt="위니브햄스터캐릭터"></div>
+            <div class="box3"><img src="./imges/weniv-garry.png" alt="위니브개구리캐릭터"></div>
+        <h2>padding 백분율 방식</h2>
+            <div class="box4"><img src="./imges/weniv-licat.png" alt="위니브사자캐릭터"></div>
+            <div class="box4"><img src="./imges/weniv-suri.png" alt="위니브수달캐릭터"></div>
+            <div class="box4"><img src="./imges/weniv-wade.png" alt="위니브두더지캐릭터"></div>
+    </div>
+</body>
+</html>
